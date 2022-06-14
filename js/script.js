@@ -1,37 +1,29 @@
-// 
+const input = document.querySelector(".tudo_list_form_input");
+const addBtn = document.querySelector(".tudo_list_form_button");
+const listContainer = document.querySelector(".tudo_list__items__ul");
 
+addBtn.addEventListener("click", crateTodo);
+function setIvenlisen() {
+  const deleteBtn = document.querySelector(".tudo_list__items__row__button");
 
-const list = document.querySelector('div');
+  const deleteBtn = document.querySelector(".tudo_list__items__row__button--add");
+  
+  deleteBtn.addEventListener("click", crateTodo);
+}
+function crateTodo() {
+  if (input.value.length < 3) {
+    return alert("miqich erkar ban gri");
+  }
+  listContainer.innerHTML += `
+  <li class="tudo_list__items__row">
+  <span class="tudo_list__items__row__content">${input.value}</span>
+  <div>
+    <button class="tudo_list__items__row__button--add">add</button>
+    <button class="tudo_list__items__row__button">X</button>
+  </div>
+</li>
+  `;
+  input.value = "";
 
-
-list.addEventListener('click', function (ev) {
-    if(ev.target.tagName === "div") {
-       ev.target.classList.toggle('checked');
-    } else if(ev.target.tagName === "div") {
-       let div = ev.target.parentNode;
-       div.remove();
-    }
-});
-
-
-const addBtna = document.getElementById('addBtn');
-
-addBtna.onclick = function () {
-    let div = document.createElement('div');
-    let inputValue = document.getElementById('toDoEl').value;
-    let t = document.createTextNode(inputValue);
-    div.appendChild(t);
-
-    if(inputValue == "") {
-       alert("Введите ваше дело!");
-    } else {
-       document.getElementById('list').appendChild(div);
-    }
-
-    document.getElementById('toDoEl').value = "";
-    let span = document.createElement('div');
-    let txt = document.createTextNode("X");
-    span.className = "close";
-    span.appendChild(txt);
-    div.appendChild(span);
+  setIvenlisen();
 }
