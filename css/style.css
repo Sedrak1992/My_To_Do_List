@@ -1,0 +1,139 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.box {
+  background: red;
+  height: 200px;
+  width: 95%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+#inputValue {
+  width: 700px;
+}
+input{
+  padding: 14px ;
+}
+button {
+  padding: 14px 40px;
+} */
+
+
+
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+ width: 94%;
+  margin: 0 auto
+}
+/* ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} */
+#list > div {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#list > div:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+#list > div:hover {
+  background: #ddd;
+}
+
+#list > div.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+#list.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.header {
+  background-color:red;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  border: none;
+  width: 75%;
+  padding: 10px;
+  font-size: 16px;
+}
+.box__add{
+  display: flex;
+}
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #b7adad;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 0;
+  margin-left: 10px;
+}
+
+#list{
+  
+}
+#list > div{
+  padding: 14px;
+   display: flex;
+   justify-content: space-between;
+}
+.addBtn:hover {
+  background-color: rgb(139, 108, 108);
+}
