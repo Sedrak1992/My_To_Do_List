@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -64,3 +64,7 @@ button {
 button:hover{
     background-color: black;
 }
+
+.done  span {
+   text-decoration: line-through 2px red;
+} */
